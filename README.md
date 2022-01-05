@@ -13,6 +13,9 @@ GameFramework地址：https://github.com/EllanJiang/GameFramework
 ## 2.使用步骤：
 在MainCamera上添加Debugger脚本即可。
 
-![image](https://user-images.githubusercontent.com/8274346/148175202-f4e72854-3761-4b39-becd-9866e6b2f08e.png)
-![image](https://user-images.githubusercontent.com/8274346/148175237-e90d459d-49aa-4a23-9919-3fc3451aab08.png)
-![image](https://user-images.githubusercontent.com/8274346/148175265-aba33ffc-1936-499a-bf6e-d8beb2a6cde2.png)
+![image](https://user-images.githubusercontent.com/8274346/148244385-91906b19-94ff-4538-add1-60c98755776e.png)
+![image](https://user-images.githubusercontent.com/8274346/148244560-1ac10478-36a4-4c45-8c8a-a1151da4f754.png)
+![image](https://user-images.githubusercontent.com/8274346/148244618-00c12fea-f1f7-4558-a83b-d2bde58a27d3.png)
+![image](https://user-images.githubusercontent.com/8274346/148244720-3d1d93d2-86aa-43a5-b040-b3e2e69b9d85.png)
+![image](https://user-images.githubusercontent.com/8274346/148244858-bda8f94d-e6b7-44b5-97fa-4ebcdc5d3a45.png)
+
