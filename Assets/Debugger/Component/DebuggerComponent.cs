@@ -1,6 +1,4 @@
-﻿using Debugger;
-using Debugger;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Debugger

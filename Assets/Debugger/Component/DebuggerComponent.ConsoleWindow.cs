@@ -236,31 +236,26 @@ namespace Debugger
                 if (m_LastLockScroll != m_LockScroll)
                 {
                     m_LastLockScroll = m_LockScroll;
-                    //m_SettingComponent.SetBool("Debugger.Console.LockScroll", m_LockScroll);
                 }
 
                 if (m_LastInfoFilter != m_InfoFilter)
                 {
                     m_LastInfoFilter = m_InfoFilter;
-                    //m_SettingComponent.SetBool("Debugger.Console.InfoFilter", m_InfoFilter);
                 }
 
                 if (m_LastWarningFilter != m_WarningFilter)
                 {
                     m_LastWarningFilter = m_WarningFilter;
-                    //m_SettingComponent.SetBool("Debugger.Console.WarningFilter", m_WarningFilter);
                 }
 
                 if (m_LastErrorFilter != m_ErrorFilter)
                 {
                     m_LastErrorFilter = m_ErrorFilter;
-                    //m_SettingComponent.SetBool("Debugger.Console.ErrorFilter", m_ErrorFilter);
                 }
 
                 if (m_LastFatalFilter != m_FatalFilter)
                 {
                     m_LastFatalFilter = m_FatalFilter;
-                    //m_SettingComponent.SetBool("Debugger.Console.FatalFilter", m_FatalFilter);
                 }
             }
 
