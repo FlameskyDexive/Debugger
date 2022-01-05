@@ -1,6 +1,4 @@
-﻿using Debugger;
-using Debugger;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Debugger
 {

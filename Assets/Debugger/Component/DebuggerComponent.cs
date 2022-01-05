@@ -142,12 +142,6 @@ namespace Debugger
             /*base.Awake();*/
 
             m_DebuggerManager = new DebuggerManager();
-            if (m_DebuggerManager == null)
-            {
-                UnityEngine.Debug.LogErrorFormat("Debugger manager is invalid.");
-                return;
-            }
-
             m_FpsCounter = new FpsCounter(0.5f);
         }
 
@@ -326,8 +320,7 @@ namespace Debugger
             {
                 names.Add("<b>Close</b>");
             }
-
-            int toolbarIndex = GUILayout.Toolbar(debuggerWindowGroup.SelectedIndex, names.ToArray(), GUILayout.Height(30f), GUILayout.MaxWidth(Screen.width));
+            int toolbarIndex = GUILayout.Toolbar(debuggerWindowGroup.SelectedIndex, names.ToArray(), GUILayout.Height(30f), GUILayout.MaxWidth(800));
             if (toolbarIndex >= debuggerWindowGroup.DebuggerWindowCount)
             {
                 m_ShowFullWindow = false;
