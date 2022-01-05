@@ -3,9 +3,11 @@ Unity Debugger插件，用来查看unity 相关log，支持真机包查看、复
 
 ## Todo:
   - 增加选项保存最近xx条log到本地，按照时间存储
-
+  - 
+##说明
 代码主要来源EllanJiang大佬的GameFramework框架的Debugger组件，原框架过于强大，调试相关代码耦合太多，本人主要做了抽离独立出来，方便集成到个人项目中使用
 GameFramework地址：https://github.com/EllanJiang/GameFramework
+
 ## 1.接入项目：
 可以接入任意Unity项目，只需要checkout下来，把Debugger文件夹放到自己项目的插件目录即可。
 ## 2.使用步骤：
