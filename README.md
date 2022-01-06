@@ -3,6 +3,7 @@
 2. 支持开启log写入本地模式，可开启/关闭本地写log
 3. 允许查看机器硬件信息（cpu/gpu/分辨率等等）
 4. 允许查看profiler性能相关信息（内存详情，各种资源占用情况，允许截取示例查看）
+5. 自适应多种屏幕分辨率
 
 ## Todo:
   - 打包成package集成到unity package manager中
