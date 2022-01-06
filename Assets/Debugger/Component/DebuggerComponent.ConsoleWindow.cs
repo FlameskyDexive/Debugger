@@ -43,6 +43,9 @@ namespace Debugger
             private bool m_FatalFilter = true;
 
             [SerializeField]
+            private bool m_saveLog = false;
+
+            [SerializeField]
             private Color32 m_InfoColor = Color.white;
 
             [SerializeField]
@@ -269,12 +272,14 @@ namespace Debugger
                     {
                         Clear();
                     }
-                    m_LockScroll = GUILayout.Toggle(m_LockScroll, "Lock Scroll", GUILayout.Width(90f));
-                    GUILayout.FlexibleSpace();
-                    m_InfoFilter = GUILayout.Toggle(m_InfoFilter, Utility.Text.Format("Info ({0})", m_InfoCount), GUILayout.Width(90f));
-                    m_WarningFilter = GUILayout.Toggle(m_WarningFilter, Utility.Text.Format("Warning ({0})", m_WarningCount), GUILayout.Width(90f));
-                    m_ErrorFilter = GUILayout.Toggle(m_ErrorFilter, Utility.Text.Format("Error ({0})", m_ErrorCount), GUILayout.Width(90f));
-                    m_FatalFilter = GUILayout.Toggle(m_FatalFilter, Utility.Text.Format("Fatal ({0})", m_FatalCount), GUILayout.Width(90f));
+                    m_LockScroll = GUILayout.Toggle(m_LockScroll, "LockScroll", GUILayout.Width(80f));
+                    GUILayout.Space(10);
+                    //GUILayout.FlexibleSpace();
+                    m_InfoFilter = GUILayout.Toggle(m_InfoFilter, Utility.Text.Format("Info({0})", m_InfoCount), GUILayout.Width(80f));
+                    m_WarningFilter = GUILayout.Toggle(m_WarningFilter, Utility.Text.Format("Warning({0})", m_WarningCount), GUILayout.Width(80f));
+                    m_ErrorFilter = GUILayout.Toggle(m_ErrorFilter, Utility.Text.Format("Error({0})", m_ErrorCount), GUILayout.Width(80f));
+                    m_FatalFilter = GUILayout.Toggle(m_FatalFilter, Utility.Text.Format("Fatal({0})", m_FatalCount), GUILayout.Width(80f));
+                    m_saveLog = GUILayout.Toggle(m_saveLog, Utility.Text.Format("SaveLog({0})", m_FatalCount), GUILayout.Width(85f));
                 }
                 GUILayout.EndHorizontal();
 
@@ -447,6 +452,10 @@ namespace Debugger
                 }
 
                 m_LogNodes.Enqueue(LogNode.Create(logType, logMessage, stackTrace));
+                if(m_saveLog)
+                {
+                    Logger.WriteLogToText(logMessage, logType);
+                }
                 while (m_LogNodes.Count > m_MaxLine)
                 {
                     ReferencePool.Release(m_LogNodes.Dequeue());
