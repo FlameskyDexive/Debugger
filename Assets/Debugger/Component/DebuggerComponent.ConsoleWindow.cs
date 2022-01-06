@@ -279,7 +279,7 @@ namespace Debugger
                     m_WarningFilter = GUILayout.Toggle(m_WarningFilter, Utility.Text.Format("Warning({0})", m_WarningCount), GUILayout.Width(80f));
                     m_ErrorFilter = GUILayout.Toggle(m_ErrorFilter, Utility.Text.Format("Error({0})", m_ErrorCount), GUILayout.Width(80f));
                     m_FatalFilter = GUILayout.Toggle(m_FatalFilter, Utility.Text.Format("Fatal({0})", m_FatalCount), GUILayout.Width(80f));
-                    m_saveLog = GUILayout.Toggle(m_saveLog, Utility.Text.Format("SaveLog({0})", m_FatalCount), GUILayout.Width(85f));
+                    m_saveLog = GUILayout.Toggle(m_saveLog, Utility.Text.Format("SaveLog", m_FatalCount), GUILayout.Width(80f));
                 }
                 GUILayout.EndHorizontal();
 

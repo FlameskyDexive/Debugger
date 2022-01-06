@@ -35,7 +35,7 @@ public static class Logger
     public static void WriteLogToText(string log, LogType logType = LogType.Error)
     {
         var sw = File.AppendText(LogFilePath);
-        sw.WriteLine($"{System.DateTime.Now.ToString("G")}:{logType}:{log}" + "\n");
+        sw.WriteLine($"{System.DateTime.Now.ToString("G")}: {logType}: {log}");
         sw.Close();
     }
 
