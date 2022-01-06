@@ -17,7 +17,6 @@
 ![image](https://user-images.githubusercontent.com/8274346/148398514-19ddc758-e728-4f2e-875c-772e84fd17f6.png)
 ![image](https://user-images.githubusercontent.com/8274346/148398712-d8a77dc8-263f-4319-abb7-a528b4754380.png)
 ![image](https://user-images.githubusercontent.com/8274346/148244618-00c12fea-f1f7-4558-a83b-d2bde58a27d3.png)
-![image](https://user-images.githubusercontent.com/8274346/148244720-3d1d93d2-86aa-43a5-b040-b3e2e69b9d85.png)
 ![image](https://user-images.githubusercontent.com/8274346/148244858-bda8f94d-e6b7-44b5-97fa-4ebcdc5d3a45.png)
 
 ## 说明
