@@ -30,10 +30,6 @@ public static class Logger
     public static void Error(object obj)
     {
         Debug.LogError(obj);
-        if (writeLog)
-        {
-            WriteLogToText(obj.ToString());
-        }
     }
 
     public static void WriteLogToText(string log, LogType logType = LogType.Error)
