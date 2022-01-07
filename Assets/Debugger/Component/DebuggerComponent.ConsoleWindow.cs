@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -208,6 +209,7 @@ namespace Debugger
                     m_FatalColor = value;
                 }
             }
+            private StreamWriter writer;
 
             public void Initialize(params object[] args)
             {
@@ -218,12 +220,20 @@ namespace Debugger
                 m_WarningFilter = m_LastWarningFilter = true;
                 m_ErrorFilter = m_LastErrorFilter = true;
                 m_FatalFilter = m_LastFatalFilter = true;
+                m_saveLog = true;
+
+                if(!Directory.Exists(LogFilePath))
+                {
+                    Directory.CreateDirectory(LogFilePath);
+                }
+                writer = new StreamWriter(LogFilePath + LogFileName);
             }
 
             public void Shutdown()
             {
                 Application.logMessageReceived -= OnLogMessageReceived;
                 Clear();
+                writer.Close();
             }
 
             public void OnEnter()
@@ -454,7 +464,7 @@ namespace Debugger
                 m_LogNodes.Enqueue(LogNode.Create(logType, logMessage, stackTrace));
                 if(m_saveLog)
                 {
-                    Logger.WriteLogToText(logMessage, logType);
+                    WriteLogToText(logMessage, logType);
                 }
                 while (m_LogNodes.Count > m_MaxLine)
                 {
@@ -491,6 +501,21 @@ namespace Debugger
                 }
 
                 return color;
+            }
+
+            public void WriteLogToText(string log, LogType logType = LogType.Error)
+            {
+                writer.WriteLine($"{System.DateTime.Now.ToString("G")}: {logType}: {log}");
+                writer.Flush();
+            }
+            private string LogFilePath
+            {
+                get { return $"{Application.persistentDataPath}/Logs/"; }
+            }
+
+            private string LogFileName
+            {
+                get { return $"/Log_{System.DateTime.Now.ToString("yyyy-MM-dd")}.txt"; }
             }
         }
     }
