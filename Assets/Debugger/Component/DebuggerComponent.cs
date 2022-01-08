@@ -335,6 +335,7 @@ namespace Debugger
             if (debuggerWindowGroup.SelectedIndex != toolbarIndex)
             {
                 debuggerWindowGroup.SelectedWindow.OnLeave();
+                m_WindowRect = DefaultWindowRect;
                 debuggerWindowGroup.SelectedIndex = toolbarIndex;
                 debuggerWindowGroup.SelectedWindow.OnEnter();
             }
