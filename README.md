@@ -14,7 +14,6 @@
 可以接入任意Unity项目，只需要checkout下来，把Debugger文件夹放到自己项目的插件目录即可。
 ## 2.使用步骤：
 在MainCamera上添加Debugger脚本即可。
-
 ![image](img/1.png)
 ![image](img/5.png)
 ![image](img/6.png)
