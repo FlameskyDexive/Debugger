@@ -15,15 +15,12 @@
 ## 2.使用步骤：
 在MainCamera上添加Debugger脚本即可。
 
-![image](https://user-images.githubusercontent.com/8274346/148244385-91906b19-94ff-4538-add1-60c98755776e.png)
-![image](https://user-images.githubusercontent.com/8274346/148398514-19ddc758-e728-4f2e-875c-772e84fd17f6.png)
-![image](https://user-images.githubusercontent.com/8274346/148398712-d8a77dc8-263f-4319-abb7-a528b4754380.png)
-![image](https://user-images.githubusercontent.com/8274346/148244618-00c12fea-f1f7-4558-a83b-d2bde58a27d3.png)
-![image](https://user-images.githubusercontent.com/8274346/148244858-bda8f94d-e6b7-44b5-97fa-4ebcdc5d3a45.png)
-![5](https://user-images.githubusercontent.com/8274346/149524452-fd94b3bc-d136-4af7-a7d1-0803abaf03d3.png)
-![6](https://user-images.githubusercontent.com/8274346/149524471-d0cc65b1-a53c-4a9d-ba68-6f9bbad80098.png)
-
-![img](image/1.png)
+![image](img/1.png)
+![image](img/2.png)
+![image](img/3.png)
+![image](img/4.png)
+![image](img/5.png)
+![image](img/6.png)
 
 ## 说明
 关联：
