@@ -1,3 +1,4 @@
+## Debugger: A powerful runtime debug tool for unity.
 # [中文](https://github.com/FlameskyDexive/Debugger/blob/main/README_CN.md) 
 # Debugger Functions
 - View logs, and copy to clipboard. 
