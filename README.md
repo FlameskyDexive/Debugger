@@ -15,7 +15,7 @@
 	git clone this project, and move it to Plugins folder of your projcet
 	
 ## 2. Attach
-	add Debugger Component to your MainCamera just fine. 在MainCamera上添加Debugger脚本即可。
+	add Debugger Component to your MainCamera just fine. 
 ![image](img/1.png)
 ![image](img/5.png)
 ![image](img/6.png)
