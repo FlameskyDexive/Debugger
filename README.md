@@ -7,7 +7,8 @@
 
 ## Todo:
   - 打包成package集成到unity package manager中
-  - 
+  - 增加搜索log功能
+  - 增加GM指令自定义关联
 
 ## 1.接入项目：
 可以接入任意Unity项目，只需要checkout下来，把Debugger文件夹放到自己项目的插件目录即可。
