@@ -247,7 +247,7 @@ namespace Debugger
                 searchStyle.wordWrap = true;
 
                 barImage = Resources.Load<Texture2D>($"SlicedBackground");
-                barImage = Resources.Load<Texture2D>($"SlicedBackground");
+                barActiveImage = Resources.Load<Texture2D>($"SlicedBackground2");
                 barStyle = new GUIStyle();
                 barStyle.border = new RectOffset(1, 1, 1, 1);
                 barStyle.normal.background = barImage;
