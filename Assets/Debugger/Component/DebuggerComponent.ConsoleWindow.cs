@@ -353,7 +353,7 @@ namespace Debugger
                         {
                             if (showSearchText && !string.IsNullOrEmpty(filterText))
                             {
-                                if(!logNode.LogMessage.Contains(filterText))
+                                if(!logNode.LogMessage.ToLower().Contains(filterText.ToLower()))
                                 {
                                     continue;
                                 }
