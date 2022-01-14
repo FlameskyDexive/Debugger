@@ -23,4 +23,4 @@
 ![image](img/4.png)
 
 ## references：
-GameFramework：https://github.com/EllanJiang/GameFramework
+[A powerful unity client framework: GameFramework](https://github.com/EllanJiang/GameFramework)
