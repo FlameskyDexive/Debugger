@@ -5,7 +5,7 @@ public class DebuggerTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log($"使用Logger打印日志的话，请先打开Debugger宏");
+        Debug.Log($"Hi, body, welcome using Debugger");
     }
 
     float time = 0;

@@ -211,6 +211,16 @@ namespace Debugger
             }
             private StreamWriter writer;
 
+
+            public Texture2D searchImage;
+            public Texture2D barImage;
+            public Texture2D barActiveImage;
+            public GUIContent searchContent;
+            bool showSearchText = false;
+            GUIStyle searchStyle;
+            public Vector2 size = new Vector2(32, 32);
+            GUIStyle barStyle;
+
             public void Initialize(params object[] args)
             {
 
@@ -227,6 +237,26 @@ namespace Debugger
                     Directory.CreateDirectory(LogFilePath);
                 }
                 writer = new StreamWriter(LogFilePath + LogFileName);
+
+                searchImage = Resources.Load<Texture2D>($"SearchIcon");
+                searchContent = new GUIContent("", searchImage, "Search for logs");
+                searchStyle = new GUIStyle();
+                searchStyle.clipping = TextClipping.Clip;
+                searchStyle.alignment = TextAnchor.LowerCenter;
+                searchStyle.fontSize = (int)(size.y / 2);
+                searchStyle.wordWrap = true;
+
+                barImage = Resources.Load<Texture2D>($"SlicedBackground");
+                barImage = Resources.Load<Texture2D>($"SlicedBackground");
+                barStyle = new GUIStyle();
+                barStyle.border = new RectOffset(1, 1, 1, 1);
+                barStyle.normal.background = barImage;
+                barStyle.active.background = barActiveImage;
+                barStyle.alignment = TextAnchor.MiddleCenter;
+                barStyle.margin = new RectOffset(1, 1, 1, 1);
+                barStyle.clipping = TextClipping.Clip;
+                barStyle.fontSize = (int)(size.y / 2);
+
             }
 
             public void Shutdown()
@@ -272,19 +302,35 @@ namespace Debugger
                 }
             }
 
+            Rect tempRect;
+            string filterText = "";
             public void OnDraw()
             {
                 RefreshCount();
 
                 GUILayout.BeginHorizontal();
                 {
-                    if (GUILayout.Button("Clear All", GUILayout.Width(100f)))
+                    if (GUILayout.Button("Clear", GUILayout.Width(50f)))
                     {
                         Clear();
                     }
+                    if (GUILayout.Button(searchContent, searchStyle, GUILayout.Width(40), GUILayout.Height(size.y)))
+                    {
+                        showSearchText = !showSearchText;
+                    }
+                    if (showSearchText)
+                    {
+                        GUILayout.Box(searchContent, barStyle, GUILayout.Width(80), GUILayout.Height(30));
+                        tempRect = GUILayoutUtility.GetLastRect();
+                        string newFilterText = GUI.TextField(tempRect, filterText, barStyle);
+                        if (newFilterText != filterText)
+                        {
+                            filterText = newFilterText;
+                            
+                        }
+                    }
                     m_LockScroll = GUILayout.Toggle(m_LockScroll, "LockScroll", GUILayout.Width(80f));
-                    GUILayout.Space(10);
-                    //GUILayout.FlexibleSpace();
+                    GUILayout.Space(2);
                     m_InfoFilter = GUILayout.Toggle(m_InfoFilter, Utility.Text.Format("Info({0})", m_InfoCount), GUILayout.Width(80f));
                     m_WarningFilter = GUILayout.Toggle(m_WarningFilter, Utility.Text.Format("Warning({0})", m_WarningCount), GUILayout.Width(80f));
                     m_ErrorFilter = GUILayout.Toggle(m_ErrorFilter, Utility.Text.Format("Error({0})", m_ErrorCount), GUILayout.Width(80f));
@@ -305,6 +351,13 @@ namespace Debugger
                         bool selected = false;
                         foreach (LogNode logNode in m_LogNodes)
                         {
+                            if (showSearchText && !string.IsNullOrEmpty(filterText))
+                            {
+                                if(!logNode.LogMessage.Contains(filterText))
+                                {
+                                    continue;
+                                }
+                            }
                             switch (logNode.LogType)
                             {
                                 case LogType.Log:

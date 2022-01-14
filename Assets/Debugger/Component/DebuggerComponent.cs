@@ -104,6 +104,7 @@ namespace Debugger
             }
         }
 
+
         /// <summary>
         /// 获取或设置调试器漂浮框大小。
         /// </summary>
@@ -194,6 +195,7 @@ namespace Debugger
                     break;
             }
         }
+
 
         private void Update()
         {

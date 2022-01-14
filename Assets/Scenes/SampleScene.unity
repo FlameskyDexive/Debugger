@@ -348,6 +348,12 @@ MonoBehaviour:
     m_FatalColor:
       serializedVersion: 2
       rgba: 4281545650
+    searchImage: {fileID: 0}
+    searchContent:
+      m_Text: 
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+    size: {x: 32, y: 32}
 --- !u!850595691 &1818652495
 LightingSettings:
   m_ObjectHideFlags: 0
