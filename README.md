@@ -13,7 +13,7 @@
 - Add GM API support
 
 ## 1. How to use
-	git clone this project, and move it to Plugins folder of your projcet
+	git clone this project, and move it to Plugins folder of your project
 	
 ## 2. Attach
 	add Debugger Component to your MainCamera just fine. 
