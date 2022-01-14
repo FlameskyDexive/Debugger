@@ -24,6 +24,5 @@
 ![6](https://user-images.githubusercontent.com/8274346/149524471-d0cc65b1-a53c-4a9d-ba68-6f9bbad80098.png)
 
 ## 说明
-代码主要来源EllanJiang大佬的GameFramework框架的Debugger组件，原框架过于强大，调试相关代码耦合太多，本人抽离独立出来并针对自身需求做了修改，方便集成到个人项目中使用
-
+关联：
 GameFramework地址：https://github.com/EllanJiang/GameFramework
