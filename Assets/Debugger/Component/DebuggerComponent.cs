@@ -196,6 +196,36 @@ namespace Debugger
             }
         }
 
+        private void OnDestroy()
+        {
+            UnregisterDebuggerWindow("Console");
+            UnregisterDebuggerWindow("Information/System");
+            UnregisterDebuggerWindow("Information/Screen");
+            UnregisterDebuggerWindow("Information/Graphics");
+            UnregisterDebuggerWindow("Information/Input/Summary");
+            UnregisterDebuggerWindow("Information/Input/Touch");
+            UnregisterDebuggerWindow("Information/Input/Location");
+            UnregisterDebuggerWindow("Information/Input/Acceleration");
+            UnregisterDebuggerWindow("Information/Input/Gyroscope");
+            UnregisterDebuggerWindow("Information/Input/Compass");
+            UnregisterDebuggerWindow("Information/Other/Scene");
+            UnregisterDebuggerWindow("Information/Other/Time");
+            UnregisterDebuggerWindow("Information/Other/Quality");
+            UnregisterDebuggerWindow("Information/Other/Web Player");
+            UnregisterDebuggerWindow("Profiler/Summary");
+            UnregisterDebuggerWindow("Profiler/Memory/Summary");
+            UnregisterDebuggerWindow("Profiler/Memory/All");
+            UnregisterDebuggerWindow("Profiler/Memory/Texture");
+            UnregisterDebuggerWindow("Profiler/Memory/Mesh");
+            UnregisterDebuggerWindow("Profiler/Memory/Material");
+            UnregisterDebuggerWindow("Profiler/Memory/Shader");
+            UnregisterDebuggerWindow("Profiler/Memory/AnimationClip");
+            UnregisterDebuggerWindow("Profiler/Memory/AudioClip");
+            UnregisterDebuggerWindow("Profiler/Memory/Font");
+            UnregisterDebuggerWindow("Profiler/Memory/TextAsset");
+            UnregisterDebuggerWindow("Profiler/Memory/ScriptableObject");
+            UnregisterDebuggerWindow("Profiler/Reference Pool");
+        }
 
         private void Update()
         {
